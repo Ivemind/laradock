@@ -1249,6 +1249,7 @@ services:
         - CHANGE_SOURCE=${CHANGE_SOURCE}
     volumes:
       - ./laravel-echo-server/laravel-echo-server.json:/app/laravel-echo-server.json:ro
+      - ${NGINX_SSL_PATH}:/etc/nginx/ssl
     ports:
       - "${LARAVEL_ECHO_SERVER_PORT}:6001"
     links:
